@@ -11,7 +11,7 @@ const useCropGrid = () => {
 
   const getLandElevation = async (lon, lat) => {
     try {
-      const res = await fetch(`https://soil-layers.herokuapp.com/getElevation/${lat}/${lon}`)
+      const res = await fetch(`http://localhost:5010/getElevation/${lat}/${lon}`)
       // const res = await fetch(`http://localhost:5010/getElevation/${lat}/${lon}`)
       const responseData = await res.json()
       return responseData
@@ -40,7 +40,7 @@ const useCropGrid = () => {
       }
       // [%sand, %silt, %clay, buld density, th33, th1500]
       console.log('reqBody', reqBody)
-      const url = 'https://soil-layers.herokuapp.com/getVanGenuchtenParams'
+      const url = 'http://localhost:5010/getVanGenuchtenParams'
       const res = await fetch(url, {
         method: 'POST', 
         headers: {
