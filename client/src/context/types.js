@@ -1,0 +1,3 @@
+export const GET_SOIL_GRID_DATA = "GET_SOIL_GRID_DATA";
+export const GET_LOCATION_DATA = "GET_LOCATION_DATA";
+export const SHOW_LOADER = "SHOW_LOADER";
